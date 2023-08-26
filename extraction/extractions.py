@@ -28,8 +28,3 @@ class invoke_extraction:
             print("An error occurred:", str(e))
         
         return text
-
-
-read_pdf=invoke_extraction('/Users/suryansh/Documents/FiiDii.pdf')
-text=read_pdf.extract_text_from_pdf()
-print(text)
