@@ -15,11 +15,11 @@ class invoke_smart:
     def load_json(self) -> {}:
         with open(self.moniter_json,'r') as file:
             links=json.load(file)
-        self.staging_path=links['staging_path']
         return links
     
     #Download csv files in staging area for further operations
-    def stage_file(self,path,staging_path):
+    def stage_file(self,path,staging_path=None):
+        staging_path=self.staging_directory
         file_name=path.rsplit('/',1)[1]
         try:
             response = requests.get(path)
@@ -54,8 +54,7 @@ def main():
     links=smart.load_json()
 
     for type,link in links.items():
-        if type != "staging_path":
-            smart.stage_file(link,links['staging_path'])
+        smart.stage_file(link)
     
     smart.data_analyzer()
 

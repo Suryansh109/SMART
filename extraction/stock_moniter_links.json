@@ -1,5 +1,4 @@
 {
-    "staging_path"  :   "/workspaces/freelance/staging/",
     "bulk_deals"    :   "https://archives.nseindia.com/content/equities/bulk.csv",
     "block_deals"   :   "https://archives.nseindia.com/content/equities/block.csv"
 }
