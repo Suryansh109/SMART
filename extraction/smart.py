@@ -2,7 +2,7 @@ import pandas as pd
 import requests
 import json
 import os
-
+import gdown
 
 class invoke_smart:
     def __init__(self, moniter_json='stock_moniter_links.json'):
@@ -18,9 +18,9 @@ class invoke_smart:
         return links
     
     #Download csv files in staging area for further operations
-    def stage_file(self,path,staging_path=None):
+    def stage_file(self,path,staging_path=None,type=None):
         staging_path=self.staging_directory
-        file_name=path.rsplit('/',1)[1]
+        file_name=str(type)
         try:
             response = requests.get(path)
             response.raise_for_status()  # Raise an exception if the request was unsuccessful            
@@ -37,9 +37,7 @@ class invoke_smart:
         
         df_trade    =   df.drop(columns=['Security Name']).drop_duplicates()
         return df_trade
-        
-        
-    
+
     def data_analyzer(self):
         for files in os.listdir(self.staging_directory):
             df=pd.read_csv(files)
@@ -54,7 +52,7 @@ def main():
     links=smart.load_json()
 
     for type,link in links.items():
-        smart.stage_file(link)
+        smart.stage_file(link,type)
     
     smart.data_analyzer()
 
