@@ -12,7 +12,7 @@ Implemented:
 TODO:
   - Page Links to be added for all these Companies to understand the behaviour/domain.
   - Email utility to send report every day.
-  - Analyze Intraday Transactions and identify any possible pattern or suitable stocks.
+  - Reconcilation methods to keep the final data updated.
 
 Avi's TODO:
   - Idenitfy if there is any day linked pattern.
