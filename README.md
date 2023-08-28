@@ -13,3 +13,8 @@ TODO:
   - Page Links to be added for all these Companies to understand the behaviour/domain.
   - Email utility to send report every day.
   - Analyze Intraday Transactions and identify any possible pattern or suitable stocks.
+
+Avi's TODO:
+  - Idenitfy if there is any day linked pattern.
+      - We have data of last 6 months with Date, link day of week and create a day wise dributions chart for Buy/Sell.
+      - This would be as per Securities and as Client Name.   
