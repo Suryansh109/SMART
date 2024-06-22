@@ -14,11 +14,6 @@ TODO:
   - Email utility to send report every day.
   - Reconcilation methods to keep the final data updated.
 
-Avi's TODO:
-  - Idenitfy if there is any day linked pattern.
-      - We have data of last 6 months with Date, link day of week and create a day wise dributions chart for Buy/Sell.
-      - This would be as per Securities and as Client Name.
-
 NOTE on DATA:
   - Reconcilation algorithm is not created yet so adding data with date appended in filename.
   - We need ETL script for better handing of these datas over time.
